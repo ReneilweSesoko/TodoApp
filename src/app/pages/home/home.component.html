@@ -1,0 +1,19 @@
+<div class="container">
+    <h1 class="display-4 text-secondary text-center">Tasks</h1>
+    <hr>
+    <div class="row">
+        <div class="col-4" *ngFor="let tasks of task" style="padding: 10px;">
+            <div class="card" style="width: 25rem;">
+                <div class="card-body">
+                <h5 class="card-title display-6">{{tasks.text}}</h5>
+                <p class="card-text">Description: {{tasks.description}}</p>
+                <p class="card-text">Date: {{tasks.day}}</p>
+                <p class="card-text">Reminder: {{tasks.reminder}}</p>
+                <button type="button" class="btn btn-danger" (click)="dltTask(tasks.id)">Delete Task</button>
+                </div>
+            </div>
+        </div>
+    </div>
+       
+
+</div>
